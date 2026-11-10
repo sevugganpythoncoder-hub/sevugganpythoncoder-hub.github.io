@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kev1inmates // developer portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <!-- BACKGROUND AUDIO ELEMENT -->
+<audio id="bgAudio" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="site-container">
+
+        
+        <nav class="top-nav">
+            <div class="nav-brand">
+                <span class="brand-badge">k1</span>
+                <span class="brand-name">kev1inmates</span>
+            </div>
+            <div class="nav-links">
+                <button id="musicToggleBtn" class="nav-music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+                <a href="#projects">projects</a>
+                <a href="#about">about</a>
+                <a href="#contact" class="nav-resume-btn">let's talk ➔</a>
+            </div>
+        </nav>
+
+        
+        <header class="hero-section scroll-reveal">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> backend & cybersecurity developer
+            </div>
+            <h1>I code backend systems, automation, and core tools.</h1>
+            <p class="hero-subtitle">Hey, I'm <span class="bold-name">kev1inmates</span>.</p>
+            <p class="hero-desc">
+                I'm 15 and spend most of my time working with async pipelines, scripting automation tools, and building native desktop interfaces.
+            </p>
+        </header>
+
+        
+        <div class="canvas-wrapper scroll-reveal">
+            <canvas id="heroCanvas"></canvas>
+            <div class="canvas-hint">interact w/ this if ur bored or sum </div>
+        </div>
+
+        
+        <section id="projects" class="horizontal-projects-section scroll-reveal">
+            <h2 class="section-title scramble-target">// featured works</h2>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3>roblox verification bot</h3>
+                            <span class="tech-tag">python / aiohttp</span>
+                        </div>
+                        <p>multi-threaded discord bot designed to verify roblox user metadata, check group ranks, and query game stats using async rest requests.</p>
+                        <button class="inspect-btn" onclick="openModal('Roblox Bot', 'Architecture: Asynchronous REST via aiohttp\nConcurrency: Multi-threaded asyncio event loop\nTarget: Roblox API v1 JSON endpoint parsing')">Inspect Specs ➔</button>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3>microos graphical layer</h3>
+                            <span class="tech-tag">python / tkinter</span>
+                        </div>
+                        <p>interactive desktop simulation environment handling virtual modules, execution sandboxes, custom event loops, and process panic handlers.</p>
+                        <button class="inspect-btn" onclick="openModal('MicroOS Layer', 'UI Engine: Tkinter Canvas Render Engine\nSandbox: Isolated Virtual Process Sandbox\nLoop: Custom Event Loop with Panic Diagnostics')">Inspect Specs ➔</button>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3>terminal interaction engine</h3>
+                            <span class="tech-tag">python & cmd</span>
+                        </div>
+                        <p>native command-line tool managing local structures and configuration loops for fast shell deployment.</p>
+                        <button class="inspect-btn" onclick="openModal('Terminal Engine', 'Shell Interface: Batch Execution Layer\nConfig: Local JSON Data Routing Engine\nDeployment: Standalone Win32/Cmd Binary')">Inspect Specs ➔</button>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3>async discord ui engine</h3>
+                            <span class="tech-tag">discord.py</span>
+                        </div>
+                        <p>bulk-updating async framework built with native input parsing and token sanitization routines.</p>
+                        <button class="inspect-btn" onclick="openModal('Discord UI Engine', 'Framework: discord.py Asynchronous Views\nSecurity: Token Sanitization & Gatekeeper\nState: In-Memory Dynamic Component State')">Inspect Specs ➔</button>
+                    </div>
+
+                    
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3>roblox verification bot</h3>
+                            <span class="tech-tag">python / aiohttp</span>
+                        </div>
+                        <p>multi-threaded discord bot designed to verify roblox user metadata, check group ranks, and query game stats using async rest requests.</p>
+                        <button class="inspect-btn" onclick="openModal('Roblox Bot', 'Architecture: Asynchronous REST via aiohttp\nConcurrency: Multi-threaded asyncio event loop\nTarget: Roblox API v1 JSON endpoint parsing')">Inspect Specs ➔</button>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3>microos graphical layer</h3>
+                            <span class="tech-tag">python / tkinter</span>
+                        </div>
+                        <p>interactive desktop simulation environment handling virtual modules, execution sandboxes, custom event loops, and process panic handlers.</p>
+                        <button class="inspect-btn" onclick="openModal('MicroOS Layer', 'UI Engine: Tkinter Canvas Render Engine\nSandbox: Isolated Virtual Process Sandbox\nLoop: Custom Event Loop with Panic Diagnostics')">Inspect Specs ➔</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="about" class="info-section scroll-reveal">
+            <div class="info-grid">
+                
+                <div class="info-box highlighted-about">
+                    <h2 class="scramble-target">// about me</h2>
+                    <p>i am a 15-year-old developer focused on core logic, automation, and backend infrastructure. i build standalone tools, script terminal workflows, and route data cleanly behind the scenes.</p>
+                </div>
+
+                <div class="info-box">
+                    <h2 class="scramble-target">// core stack</h2>
+                    <div class="stack-tags">
+                        <span class="tag">python</span>
+                        <span class="tag">pandas</span>
+                        <span class="tag">c</span>
+                        <span class="tag">cmd (batch)</span>
+                        <span class="tag">bash</span>
+                        <span class="tag">html/css</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cert-box">
+                <h2 class="scramble-target">// certifications</h2>
+                <div class="cert-cards">
+                    <div class="cert-card">
+                        <div>
+                            <h4>cs50p: introduction to programming with python</h4>
+                            <p>issued by harvardx / harvard university</p>
+                        </div>
+                        <a href="https://certificates.cs50.io/7a5018bb-236b-416f-ad4b-a482b6a4e5e5.png?size=letter" target="_blank" class="verify-btn">verify &rarr;</a>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div>
+                            <h4>pandas data analysis certificate</h4>
+                            <p>issued by kaggle learn</p>
+                        </div>
+                        <a href="https://www.kaggle.com/learn/certification/sevugganarun/pandas" target="_blank" class="verify-btn">verify &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <footer id="contact" class="bottom-contact scroll-reveal">
+            <div class="contact-header-area">
+                <h3>let's talk <span class="coffee-emoji">☕</span></h3>
+                <p>have an idea, project feedback, or want to build something? send a message directly!</p>
+                
+                <div class="social-pills">
+                    <span class="soc-pill">discord: @kev1inmates</span>
+                    <a href="https://github.com/sevugganpythoncoder-hub" target="_blank" class="soc-pill">github: sevugganpythoncoder-hub ➔</a>
+                </div>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="apikey" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                <input type="text" name="name" placeholder="your name / discord tag" required>
+                <textarea name="message" placeholder="your message or project details..." rows="3" required></textarea>
+                <button type="submit" class="submit-btn">send message ➔</button>
+            </form>
+        </footer>
+
+        <div class="footer-copy">
+            <p>&copy; 2026 kev1inmates. built from scratch w/h mohit.</p>
+        </div>
+
+    </div>
+
+    
+    <div id="specModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 id="modalTitle">System Specs</h3>
+            <p>Detailed technical architecture and pipeline telemetry:</p>
+            <div id="modalBody" class="modal-specs"></div>
+            <button class="modal-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
